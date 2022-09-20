@@ -1,0 +1,158 @@
+@media(max-width:985px) {
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pricing-table-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+
+    }
+    .hero{
+        grid-template-columns: 1fr;
+    }
+    .btn{
+        margin: 2rem;
+    }
+    /* MOBILE NAVIGATION */
+    /* fifth step: We want it to display on this media size and below: */
+    .logo{
+        font-size: 3rem;
+    }
+    .btn-mobile-nav{
+        display: block;
+    }
+   
+    /* step six: we want to style the navigation links so it would display in a drop down fashion by positioning it relatively to the header.
+    Here we make use of the links container which is the "main-nav" */
+    .main-nav{
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /* Step Eleven: We want to add a sliding effect from the left:
+  1.transform*/
+  transform: translateX(100%);
+  /* 2. We want to stop the nav from overflowing to the sides and causing a scroll effect, so we set "overflow-X:hidden;" To the html, body, and set header to relative */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in;
+  /* step eight: We want to hide the navigation at this screen size, leaving only the icon */
+  /* 1. Hide it visually */
+  opacity: 0;
+  /* 2. Make it unaccessible to mouse and keyboard */
+  pointer-events: none;
+    /* 3. Hide it from screen readers. */
+    visibility: hidden;
+    } 
+  
+
+    /* step seven: Change the flex direction to make them stack ontop of each other. To do that, we target the "main-nav-list" */
+.main-nav-list{
+   flex-direction: column;
+}
+    /* We can increase the size ofthe links. */
+    .main-nav-link:link,
+.main-nav-link:visited{
+    font-size: 3rem;
+} 
+/* Step Nine: Wewant to create a mechanism that hides and shows the button when clicked:border:
+1. We add a class to the header. We call this one 'Nav-open' for example; */
+
+}
+.nav-open .main-nav{
+    opacity: 0.9;
+    /* Since "nav-open" is now the container of all the navs, it's child elements will only work if nav-open is present */
+    /* To make it visible again after hiding for keyboard and screen readers */
+    pointer-events: auto;
+    visibility: visible;
+    /* Step twelve: We copy the transform property and set it zero here */
+    transform: translateX(0);
+}
+/* step Ten: We want to display the close-icon and hide the menu-icon */
+.nav-open .icon-mobile-nav[name="close-outline"]{
+    display: block;
+    
+}
+.nav-open .icon-mobile-nav[name="menu-outline"]{
+    display: none;
+}
+
+@media(max-width:750px) {
+    html{
+        font-size: 56.25%;
+    }
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .pricing-table-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 2rem;
+
+    }
+
+    .hero {
+        max-width: 120rem;
+        grid-template-columns: 1fr;
+    }
+.logo{
+    font-size: 2rem;
+}
+    .btn {
+        margin: 2rem;
+    }
+    
+
+    .pricing-contents {
+        margin-top: 4rem;
+       
+    }
+    .overview-grid{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .price-description{
+        padding-left: 2rem;
+    }
+    .footer-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+/* @media(max-width:550px) {
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .pricing-table-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 2rem;
+
+    }
+
+    .hero {
+        max-width: 120rem;
+        margin: 0 auto;
+        padding: 0 3.2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 9.6rem;
+        align-items: center;
+    }
+
+    .btn {
+        margin: 2rem;
+    }
+   
+} */

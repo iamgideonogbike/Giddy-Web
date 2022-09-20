@@ -1,0 +1,446 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    /* does not work on safari
+    scroll-behavior: smooth; */
+}
+
+body {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header section */
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #99e9f2;
+    height: 9.6rem;
+    padding: 0 4.8rem;
+    position: relative;
+
+}
+
+.logo {
+    color: rgb(22, 87, 193);
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-decoration: none;
+
+}
+
+/* Navigation Section */
+.main-nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: #2f343a;
+    font-weight: 700;
+    font-size: 1.8rem;
+    transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+    color: #3333;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+    padding: 1.2rem 2.4rem;
+    border-radius: 9px;
+    color: white;
+    background-color: #0c8599;
+    font-size: 1.2rem;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+    background-color: #0b7285;
+}
+
+/* mobile navigation */
+/* second step */
+
+.btn-mobile-nav {
+    border: none;
+    background: none;
+    cursor: pointer;
+    /* The icons shouldn't show on normal width e.g large screens, except on the required width. */
+    display: none;
+}
+
+/* third step */
+.icon-mobile-nav {
+    height: 4.8rem;
+    width: 4.8rem;
+    color: black;
+}
+
+/* fourth step: target the close menu and hide it because it shouldn't appear on the page by default */
+.icon-mobile-nav[name="close-outline"] {
+    display: none;
+}
+/* Sticky Navigation */
+.sticky .header{
+position: fixed;
+top: 0;
+bottom: 0;
+width: 100%;
+z-index: 999;
+background-color: white;
+padding-top:0 ;
+padding-bottom: 0;
+height: 8rem;
+box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.04,);
+}
+.sticky .section-hero{
+margin-top: 9.6rem;
+}
+/* Hero section */
+.section-hero {
+    background-color: #99e9f2;
+    padding: 4.8rem 0 9.8rem 0;
+}
+
+.hero {
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9.6rem;
+    align-items: center;
+}
+
+.hero-img {
+    width: 100%;
+}
+
+.primary-header {
+    font-size: 3.4rem;
+    line-height: 1.4;
+    margin-bottom: 3.2rem;
+
+}
+
+.description {
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 4.8rem;
+    color: #333;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 1.6rem 3.2rem;
+    border-radius: 9px;
+    font-size: 2rem;
+    background-color: #062b32;
+    margin-right: 2rem;
+}
+
+.btn-primary:link,
+.btn-primary:visited {
+    background-color: #062b32;
+    color: #ffff;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+    background-color: #FFF;
+    color: #062b32;
+
+}
+
+.btn-secondary:link,
+.btn-secondary:visited {
+    background-color: #3333;
+    color: #ffff;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+    background-color: #555;
+    color: #ffff;
+}
+
+/* Features section */
+.container {
+    max-width: 120rem;
+    padding: 0 3.4rem;
+    margin: 0 auto;
+}
+
+.features-section {
+    padding: 4.8rem 0 9.8rem 0;
+
+}
+
+.feature-text-box {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    gap: 4rem;
+}
+
+.grid-2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4-cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.icon {
+    height: 2.8rem;
+    width: 2.8rem;
+    background-color: #0b7285;
+    padding: 1rem;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.05);
+
+}
+
+.card-title {
+    font-size: 1.6rem;
+    margin: 2rem 0rem 2rem 0rem;
+}
+
+.subheading {
+    font-size: 2.7rem;
+    color: #0b7285;
+    ;
+    margin-bottom: 4.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.grid-cards {
+    border-radius: 11px;
+    padding: 2rem;
+    box-shadow: 0 1.4rem 4.8rem rgba(0, 0, 0, 0.075);
+    transition: all 0.4s;
+}
+
+.grid-cards:hover {
+    transform: translateY(-0.5rem);
+}
+
+.section-overview {
+    padding: 4.8rem 0 9.8rem 0;
+    background-color: #0b7285;
+}
+
+.overview {
+    padding-top: 5rem;
+    align-items: center;
+}
+
+.overview-header {
+    font-size: 4.1rem;
+    color: #ffff;
+}
+
+.overview-description {
+    font-size: 2.5rem;
+    margin: 2.3rem;
+}
+
+.card-title {
+    font-size: 2rem;
+
+}
+
+.card-description {
+    font-size: 1.7rem;
+}
+
+.grid-header {
+    font-size: 4.5rem;
+    color: #333;
+    font-weight: 700;
+}
+
+.grid-content {
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+/* pricing */
+.pricing {
+    padding: 4.8rem 0 9.8rem 0;
+    background-color: rgb(234, 228, 228);
+}
+
+.pricing-table-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 4.2rem;
+}
+
+.pricing-contents {
+    padding: 1.7rem;
+    background-color: #fff;
+    margin-top: 9rem;
+    border-radius: 9px;
+    box-shadow: 0 1.4rem 4.8rem rgba(0, 0, 0, 0.075);
+    transition: all 0.4s;
+}
+
+.pricing-contents:hover {
+    transform: translateY(-0.3rem);
+}
+
+.table-header {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+}
+
+.price-description {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.plan-description {
+    font-size: 2rem;
+    padding: 1rem 0 1rem 0;
+}
+
+.amount {
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+
+.cta {
+    display: block;
+    padding: 1rem 2rem;
+    border-radius: 9px;
+    background: black;
+    width: 100%;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 2.5rem 0 2.5rem 0;
+}
+
+.cta:hover {
+    background-color: #0b7285;
+    color: #fff;
+    border: 2px solid white;
+    cursor: pointer;
+
+}
+
+.details-header {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.icon-list {
+    list-style: none;
+    padding-bottom: 2rem;
+
+}
+
+li {
+    padding: 1.3rem;
+
+}
+
+.icon-2 {
+    height: 1.6rem;
+    width: 1.6rem;
+    color: green;
+}
+
+span {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+
+}
+
+footer {
+    background-color: #062b32;
+    color: #fff;
+    padding: 4.8rem 0 9.8rem 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2.4rem;
+}
+
+footer .logo {
+    font-size: 3.1rem;
+    margin-bottom: 3rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.social-media {
+    list-style: none;
+    display: flex;
+}
+
+.social-icons {
+    height: 1.8rem;
+    width: 1.8rem;
+
+}
+
+.social-icons:hover {
+    color: #0c8599;
+    cursor: pointer;
+}
+
+.second-grid-heading {
+    font-size: 2.6rem;
+    font-weight: bold;
+    padding-left: 2rem;
+}
+
+.link-list span {
+    font-size: 1.4rem;
+}
+
+.copyright {
+    font-size: 1.6rem;
+}
